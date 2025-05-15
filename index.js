@@ -7,6 +7,7 @@ var userdata = require('./model/userdata')
 var pfm = require('./model/pfm')
 var email_obj
 var email_string
+const PORT = process.env.PORT || 1880;
 // initialising
 var app = express()
 
@@ -199,6 +200,6 @@ app.put("/edituser/:id", async(req,res)=>{
 })
 
 //port
-app.listen(1880,(req,res)=>{
+app.listen(PORT,(req,res)=>{
     console.log("Port is up and running")
 })
